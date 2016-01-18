@@ -3,7 +3,7 @@ import "../tweets/angular/index";
 import "../about/angular/index";
 import "angular";
 require("toastr/toastr.js");
-
+require("../../styles/main.scss");
 require("font-awesome/css/font-awesome.css");
 require("bootstrap/dist/css/bootstrap.css");
 require("./styles/screen.scss");
