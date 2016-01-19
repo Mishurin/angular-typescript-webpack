@@ -1,6 +1,4 @@
-import "../common/angular/index";
-import "../tweets/angular/index";
-import "../about/angular/index";
+import "../test-feature/index";
 import "angular";
 require("toastr/toastr.js");
 require("../../styles/main.scss");
@@ -9,7 +7,7 @@ require("bootstrap/dist/css/bootstrap.css");
 require("./styles/screen.scss");
 require("toastr/build/toastr.css");
 
-angular.module("app", ["app.common", "app.tweets", "app.about"]);
+angular.module("app", []);
 angular.bootstrap(document, ["app"], {
     strictDi: true
 });

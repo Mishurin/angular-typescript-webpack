@@ -7,7 +7,7 @@ preprocessors[entry] = ['webpack'];
 module.exports = function karmaConfig(config) {
     config.set({
         frameworks: [
-            'jasmine'
+            'mocha', 'chai'
         ],
         reporters: [
             // Reference: https://github.com/mlex/karma-spec-reporter
@@ -39,7 +39,9 @@ module.exports = function karmaConfig(config) {
             require('karma-coverage'),
             require('karma-spec-reporter'),
             require('karma-phantomjs2-launcher'),
-            require('karma-typescript-preprocessor')
+            require('karma-typescript-preprocessor'),
+            require('karma-mocha'),
+            require('karma-chai')
         ],
         typescriptPreprocessor: {
             // options passed to the typescript compiler

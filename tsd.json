@@ -23,9 +23,6 @@
     "lodash/lodash.d.ts": {
       "commit": "5109e1269d6ab8e8e73b1a5e85d8ceb836d3099f"
     },
-    "jasmine/jasmine.d.ts": {
-      "commit": "5109e1269d6ab8e8e73b1a5e85d8ceb836d3099f"
-    },
     "angularjs/angular-mocks.d.ts": {
       "commit": "efa0c1196d7280640e624ac1e7fa604502e7bd63"
     },
@@ -34,6 +31,15 @@
     },
     "toastr/toastr.d.ts": {
       "commit": "9ce3cd4ded7536d40b8d65264ad729f442f5a052"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "93bae1bb4c887c1375a4c1f0c3bb849ff06b8ac6"
+    },
+    "assertion-error/assertion-error.d.ts": {
+      "commit": "93bae1bb4c887c1375a4c1f0c3bb849ff06b8ac6"
+    },
+    "chai/chai.d.ts": {
+      "commit": "93bae1bb4c887c1375a4c1f0c3bb849ff06b8ac6"
     }
   }
 }

@@ -6,6 +6,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CompressionPlugin = require("compression-webpack-plugin");
 var ClosureCompilerPlugin = require('webpack-closure-compiler');
 var argv = require('yargs').argv;
+var path = require('path');
 
 module.exports = function makeWebpackConfig(options) {
     console.log(options);
@@ -101,7 +102,7 @@ module.exports = function makeWebpackConfig(options) {
             }));
     }
     if (options.TEST) {
-        config.context = __dirname + '/src';
+        config.context = path.join(__dirname,'/src');
         config.entry = './index.ts';
         config.module.postLoaders = [
             {
