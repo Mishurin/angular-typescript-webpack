@@ -2,8 +2,10 @@
 var path = require('path');
 var webpackConfig = require('./webpack.test');
 var entry = path.resolve(webpackConfig.context, webpackConfig.entry);
+var testEntry = 'src/tests.ts';
 var preprocessors = {};
 preprocessors[entry] = ['webpack'];
+preprocessors[testEntry] = ['webpack'];
 module.exports = function karmaConfig(config) {
     config.set({
         frameworks: [
@@ -17,7 +19,7 @@ module.exports = function karmaConfig(config) {
             // Output code coverage files
             'coverage'
         ],
-        files: [entry],
+        files: [entry, testEntry],
         preprocessors: preprocessors,
         browsers: [
             // Run tests using PhantomJS
@@ -35,7 +37,6 @@ module.exports = function karmaConfig(config) {
         webpack: webpackConfig,
         plugins: [
             require('karma-webpack'),
-            require('karma-jasmine'),
             require('karma-coverage'),
             require('karma-spec-reporter'),
             require('karma-phantomjs2-launcher'),

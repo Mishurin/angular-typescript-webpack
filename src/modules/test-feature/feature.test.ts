@@ -1,4 +1,4 @@
-import num from 'index';
+import num from './index';
 import * as chai from 'chai';
 
 var expect = chai.expect;
