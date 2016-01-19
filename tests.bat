@@ -1,0 +1,1 @@
+karma start --auto-watch --no-single-run --NODE_ENV=dev
