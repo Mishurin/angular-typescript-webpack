@@ -1,13 +1,15 @@
 import "angular";
 
-import "../test-feature/index";
+import '../common/angular/index';
 
-require("../../styles/main.scss");
+import '../test-feature/index';
 
-require("./styles/screen.scss");
+require('../../styles/main.scss');
 
-angular.module("app", []);
+require('./styles/screen.scss');
 
-angular.bootstrap(document, ["app"], {
+angular.module('app', ['app.common']);
+
+angular.bootstrap(document, ['app'], {
     strictDi: true
 });
