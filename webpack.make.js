@@ -4,16 +4,15 @@ var webpack = require('webpack');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CompressionPlugin = require("compression-webpack-plugin");
-var ClosureCompilerPlugin = require('webpack-closure-compiler');
 var argv = require('yargs').argv;
 var path = require('path');
 
 module.exports = function makeWebpackConfig(options) {
     console.log(options);
     var config = {
-        entry: ['./src/index.ts'],
+        entry: {app: './src/index.ts', vendors: './src/vendors.ts'},
         output: {
-            filename: 'build.js',
+            filename: "[name].js",
             path: options.BUILD ? 'dist' : 'dev'
         },
         resolve: {

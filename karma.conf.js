@@ -1,11 +1,13 @@
 'use strict';
 var path = require('path');
 var webpackConfig = require('./webpack.test');
-var entry = path.resolve(webpackConfig.context, webpackConfig.entry);
-var testEntry = 'src/tests.ts';
+var appEntry = 'src/index.ts';
+var vendorsEntry = 'src/vendors.ts';
+var testsEntry = 'src/tests.ts';
 var preprocessors = {};
-preprocessors[entry] = ['webpack'];
-preprocessors[testEntry] = ['webpack'];
+preprocessors[appEntry] = ['webpack'];
+preprocessors[vendorsEntry] = ['webpack'];
+preprocessors[testsEntry] = ['webpack'];
 module.exports = function karmaConfig(config) {
     config.set({
         frameworks: [
@@ -19,7 +21,7 @@ module.exports = function karmaConfig(config) {
             // Output code coverage files
             'coverage'
         ],
-        files: [entry, testEntry],
+        files: [appEntry, testsEntry, vendorsEntry],
         preprocessors: preprocessors,
         browsers: [
             // Run tests using PhantomJS
